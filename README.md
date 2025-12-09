@@ -6,7 +6,7 @@
 
 Interface web moderna e responsiva para o sistema de gestão clínica, desenvolvida com **Angular 18** utilizando a nova abordagem de **Standalone Components**.
 
-Este projeto consome a API RESTful construída em .NET 10 ([Link para o Backend](https://github.com/SEU_USUARIO/clinica-api-dotnet-clean-arch)), completando a arquitetura Full Stack segura com autenticação JWT.
+Este projeto consome a API RESTful construída em .NET 10 ([Link para o Backend](https://github.com/Lorenzo-Zagallo/clinica-api-dotnet-clean-arch)), completando a arquitetura Full Stack segura com autenticação JWT.
 
 ## 🚀 Tecnologias & Práticas
 
