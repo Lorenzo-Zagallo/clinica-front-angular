@@ -1,59 +1,72 @@
-# ClinicaFront
+# 🏥 Clínica Web - Angular 18 & TailwindCSS
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 21.0.2.
+[![Angular](https://img.shields.io/badge/Angular-18.0-DD0031?style=flat&logo=angular)](https://angular.io/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
 
-## Development server
+Interface web moderna e responsiva para o sistema de gestão clínica, desenvolvida com **Angular 18** utilizando a nova abordagem de **Standalone Components**.
 
-To start a local development server, run:
+Este projeto consome a API RESTful construída em .NET 10 ([Link para o Backend](https://github.com/SEU_USUARIO/clinica-api-dotnet-clean-arch)), completando a arquitetura Full Stack segura com autenticação JWT.
 
-```bash
-ng serve
-```
+## 🚀 Tecnologias & Práticas
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+- **Angular 18**: Framework SPA utilizando recursos modernos.
+- **Standalone Components**: Arquitetura modular sem a complexidade de `NgModules`.
+- **TailwindCSS**: Estilização utilitária para interfaces rápidas e responsivas.
+- **Reactive Forms**: Manipulação robusta e tipada de formulários.
+- **Interceptors**: Injeção automática de Token JWT em todas as requisições.
+- **Guards**: Proteção de rotas para impedir acesso não autorizado.
+- **Services**: Isolamento da lógica de comunicação HTTP.
 
-## Code scaffolding
+## 🏗️ Estrutura do Projeto
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O projeto segue uma organização por responsabilidades para facilitar a escala:
 
-```bash
-ng generate component component-name
-```
+```text
+src/app/
+├── core/                # Singleton services, interceptors, guards e models
+├── features/            # Telas do sistema (Auth, Pacientes)
+└── shared/              # Componentes visuais reutilizáveis (UI)
+````
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## ⚙️ Como Executar
 
-```bash
-ng generate --help
-```
+### Pré-requisitos
 
-## Building
+  - Node.js (LTS)
+  - API Backend rodando (veja o repositório da API)
 
-To build the project run:
+### Passo a Passo
 
-```bash
-ng build
-```
+1.  Clone o repositório:
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+    ```bash
+    git clone https://github.com/Lorenzo-Zagallo/clinica-front-angular
+    ```
 
-## Running unit tests
+2.  Instale as dependências:
 
-To execute unit tests with the [Vitest](https://vitest.dev/) test runner, use the following command:
+    ```bash
+    npm install
+    ```
 
-```bash
-ng test
-```
+3.  Execute o servidor de desenvolvimento:
 
-## Running end-to-end tests
+    ```bash
+    ng serve
+    ```
 
-For end-to-end (e2e) testing, run:
+4.  Acesse a aplicação em: `http://localhost:4200`
 
-```bash
-ng e2e
-```
+## 🔐 Funcionalidades
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+  - **Autenticação**: Login integrado com API .NET (JWT).
+  - **Gestão de Pacientes**:
+      - Listagem com tabela responsiva.
+      - Cadastro de novos pacientes com validação.
+      - Exclusão de registros.
+  - **Segurança**: Redirecionamento automático se o token expirar ou não existir.
 
-## Additional Resources
+-----
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Desenvolvido por **Lorenzo Zagallo** 👨‍💻
