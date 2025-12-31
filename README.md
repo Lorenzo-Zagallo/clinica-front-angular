@@ -1,8 +1,9 @@
 # 🏥 Clínica Web - Angular 21 & TailwindCSS
 
-[![Angular](https://img.shields.io/badge/Angular-21.0-DD0031?style=flat&logo=angular)](https://angular.io/)
-[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat&logo=tailwind-css)](https://tailwindcss.com/)
-[![License](https://img.shields.io/badge/License-MIT-green)](LICENSE)
+[![Angular](https://img.shields.io/badge/Angular-21.0-DD0031?style=flat-square&logo=angular)](https://angular.io/)
+[![TailwindCSS](https://img.shields.io/badge/Tailwind-3.0-38B2AC?style=flat-square&logo=tailwind-css)](https://tailwindcss.com/)
+[![License](https://img.shields.io/badge/License-MIT-green?style=flat-square)](LICENSE)
+[![NPM Version](https://img.shields.io/npm/v/chart.js?style=flat-square&color=FF6384&label=Chart.js)](https://www.npmjs.com/package/chart.js)
 
 Interface web moderna e responsiva para o sistema de gestão clínica, desenvolvida com a versão mais recente do **Angular (v21)**, utilizando **Standalone Components** e arquitetura preparada para **Signals**.
 
@@ -18,6 +19,7 @@ Este projeto consome a API RESTful construída em .NET 10 ([Link para o Backend]
 - **Interceptors**: Injeção automática de Token JWT em todas as requisições.
 - **Guards (Functional)**: Proteção de rotas com a nova sintaxe funcional.
 - **Services**: Isolamento da lógica de comunicação HTTP.
+- **Chart.js (ng2-charts)**: Visualização de dados dinâmica e responsiva.
 
 ## 🏗️ Estrutura do Projeto
 
@@ -63,10 +65,13 @@ src/app/
 
   - **Autenticação**: Login integrado com API .NET (JWT).
   - **Gestão de Pacientes**:
-      - Listagem com tabela responsiva.
-      - Cadastro de novos pacientes com validação.
-      - Exclusão de registros.
+    - Listagem com tabela responsiva.
+    - Cadastro de novos pacientes com validação.
+    - Exclusão de registros.
   - **Segurança**: Redirecionamento automático se o token expirar ou não existir.
+  - **Dashboard BI**:
+    - Visão geral com KPIs (Total de Pacientes, Faturamento, Ticket Médio).
+    - Gráficos financeiros interativos para tomada de decisão.
 
 -----
 
