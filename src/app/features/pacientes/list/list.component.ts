@@ -51,4 +51,8 @@ export class ListComponent implements OnInit {
         this.authService.logout(); // Limpa o localStorage
         this.router.navigate(['/login']); // Vai pra tela de login
     }
+
+    irParaDashboard() {
+        this.router.navigate(['/dashboard']);
+    }
 }

@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Paciente } from '../models/paciente.model';
+import { DashboardData } from '../models/dashboard.model';
 
 @Injectable({
     providedIn: 'root',
@@ -26,4 +27,9 @@ export class PacientesService {
     }
 
     // PUT: Atualizar (faremos depois)
+
+    // GET: Buscar dados para o Dashboard
+    getDashboard(): Observable<DashboardData> {
+        return this.http.get<DashboardData>(`${this.apiUrl}/dashboard`);
+    }
 }

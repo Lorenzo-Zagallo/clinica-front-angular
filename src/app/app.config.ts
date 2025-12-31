@@ -5,6 +5,7 @@ import { routes } from './app.routes';
 
 import { provideHttpClient, withFetch, withInterceptors } from '@angular/common/http';
 import { authInterceptor } from './core/interceptors/auth.interceptor';
+import { provideCharts, withDefaultRegisterables } from 'ng2-charts';
 
 export const appConfig: ApplicationConfig = {
     providers: [
@@ -15,6 +16,9 @@ export const appConfig: ApplicationConfig = {
         provideHttpClient(
             withFetch(), // Usa Fetch API nativa (mais moderna)
             withInterceptors([authInterceptor]) // Ativamos o nosso interceptor
-        )
+        ),
+
+        // Ativa os gráficos da dashboard
+        provideCharts(withDefaultRegisterables())
     ]
 };

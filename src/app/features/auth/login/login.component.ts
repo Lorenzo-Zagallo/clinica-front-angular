@@ -36,7 +36,7 @@ export class LoginComponent {
             next: (response) => {
                 console.log('Login Sucesso!', response);
                 // 3. Se der certo, redireciona para a home (ou lista de pacientes)
-                this.router.navigate(['/pacientes']);
+                this.router.navigate(['/dashboard']);
             },
             error: (err) => {
                 console.error('Erro no login', err);
